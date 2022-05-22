@@ -1,0 +1,28 @@
+﻿@model About
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<div class="text-center">
+    <h1 class="display-4"> @localizer["HelloWorld"] </h1>
+    <h1 class="display-4"> @ViewData["HelloWorld"] </h1>
+
+
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @Model.Default
+    <p>@Model.Aboutlanguages[0].Name</p>
+</div>
+
+
+@*@section Scripts{
+    <script>
+        $("#click").click(function(){
+             $.ajax({
+               url: "/home/Index",
+               data: { "EN" },
+               method: "POST",
+               success: function (res) {
+        }
+    })
+        })
+    </script>
+}*@
